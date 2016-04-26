@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "LGSideMenuController.h"
+#import "LeftViewController.h"
 
 @interface AppDelegate ()
-
+@property (strong, nonatomic) LeftViewController *leftViewController;
 @end
 
 @implementation AppDelegate
@@ -17,6 +20,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ViewController *viewController = [[ViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    LGSideMenuController *sideMenuController = [[LGSideMenuController alloc] initWithRootViewController:navigationController];
+    [sideMenuController setLeftViewEnabledWithWidth:250.0f
+                                  presentationStyle:LGSideMenuPresentationStyleScaleFromBig
+                               alwaysVisibleOptions:0];
+    sideMenuController.leftViewBackgroundColor = [UIColor whiteColor];
+    LeftViewController *leftViewController = [LeftViewController new];
+    _leftViewController = leftViewController;
+    leftViewController.tintColor = [UIColor orangeColor];
+    [leftViewController.tableView reloadData];
+    [sideMenuController.leftView addSubview:leftViewController.tableView];
+    
+    
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = sideMenuController;
+    self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
+    
     return YES;
 }
 

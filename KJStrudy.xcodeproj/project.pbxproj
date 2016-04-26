@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		439E23F4456A586220A73E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0767FC863545E0A590FC4075 /* libPods.a */; };
 		D42BBA1A1CBA716D008D1F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D42BBA191CBA716D008D1F6C /* main.m */; };
 		D42BBA1D1CBA716D008D1F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D42BBA1C1CBA716D008D1F6C /* AppDelegate.m */; };
 		D42BBA201CBA716D008D1F6C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D42BBA1F1CBA716D008D1F6C /* ViewController.m */; };
@@ -16,6 +17,8 @@
 		D42BBA2B1CBA716D008D1F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42BBA291CBA716D008D1F6C /* LaunchScreen.storyboard */; };
 		D42BBA361CBA716D008D1F6C /* KJStrudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D42BBA351CBA716D008D1F6C /* KJStrudyTests.m */; };
 		D42BBA411CBA716D008D1F6C /* KJStrudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D42BBA401CBA716D008D1F6C /* KJStrudyUITests.m */; };
+		D4EFCB1E1CCF44FA00D9F726 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFCB1D1CCF44FA00D9F726 /* LeftViewController.m */; };
+		D4EFCB211CCF499A00D9F726 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFCB201CCF499A00D9F726 /* LeftViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0767FC863545E0A590FC4075 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9FEA6DE0073ACC05DBD4F6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D42BBA151CBA716D008D1F6C /* KJStrudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KJStrudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42BBA191CBA716D008D1F6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D42BBA1B1CBA716D008D1F6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,6 +58,11 @@
 		D42BBA3C1CBA716D008D1F6C /* KJStrudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJStrudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42BBA401CBA716D008D1F6C /* KJStrudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJStrudyUITests.m; sourceTree = "<group>"; };
 		D42BBA421CBA716D008D1F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4EFCB1C1CCF44FA00D9F726 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		D4EFCB1D1CCF44FA00D9F726 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		D4EFCB1F1CCF499A00D9F726 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
+		D4EFCB201CCF499A00D9F726 /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
+		D50EC74B480A3B5C0FF6F289 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				439E23F4456A586220A73E35 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +91,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23871AA06330DE0D0C64DD4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0767FC863545E0A590FC4075 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33E711B91AE32C5C1BC1618C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D50EC74B480A3B5C0FF6F289 /* Pods.debug.xcconfig */,
+				1C9FEA6DE0073ACC05DBD4F6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D42BBA0C1CBA716D008D1F6C = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +115,8 @@
 				D42BBA341CBA716D008D1F6C /* KJStrudyTests */,
 				D42BBA3F1CBA716D008D1F6C /* KJStrudyUITests */,
 				D42BBA161CBA716D008D1F6C /* Products */,
+				33E711B91AE32C5C1BC1618C /* Pods */,
+				23871AA06330DE0D0C64DD4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,8 +135,7 @@
 			children = (
 				D42BBA1B1CBA716D008D1F6C /* AppDelegate.h */,
 				D42BBA1C1CBA716D008D1F6C /* AppDelegate.m */,
-				D42BBA1E1CBA716D008D1F6C /* ViewController.h */,
-				D42BBA1F1CBA716D008D1F6C /* ViewController.m */,
+				D4EFCB1B1CCF155400D9F726 /* LGSideMenu */,
 				D42BBA211CBA716D008D1F6C /* Main.storyboard */,
 				D42BBA271CBA716D008D1F6C /* Assets.xcassets */,
 				D42BBA291CBA716D008D1F6C /* LaunchScreen.storyboard */,
@@ -143,6 +172,19 @@
 			path = KJStrudyUITests;
 			sourceTree = "<group>";
 		};
+		D4EFCB1B1CCF155400D9F726 /* LGSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				D4EFCB1C1CCF44FA00D9F726 /* LeftViewController.h */,
+				D4EFCB1D1CCF44FA00D9F726 /* LeftViewController.m */,
+				D4EFCB1F1CCF499A00D9F726 /* LeftViewCell.h */,
+				D4EFCB201CCF499A00D9F726 /* LeftViewCell.m */,
+				D42BBA1E1CBA716D008D1F6C /* ViewController.h */,
+				D42BBA1F1CBA716D008D1F6C /* ViewController.m */,
+			);
+			name = LGSideMenu;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D42BBA451CBA716D008D1F6C /* Build configuration list for PBXNativeTarget "KJStrudy" */;
 			buildPhases = (
+				15F3F365ECD71FFCB42A640D /* Check Pods Manifest.lock */,
 				D42BBA111CBA716D008D1F6C /* Sources */,
 				D42BBA121CBA716D008D1F6C /* Frameworks */,
 				D42BBA131CBA716D008D1F6C /* Resources */,
+				18A43AA4FB940A318166324A /* Embed Pods Frameworks */,
+				39328AC696AFFCB30608112E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,12 +313,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15F3F365ECD71FFCB42A640D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		18A43AA4FB940A318166324A /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39328AC696AFFCB30608112E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D42BBA111CBA716D008D1F6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D42BBA201CBA716D008D1F6C /* ViewController.m in Sources */,
+				D4EFCB211CCF499A00D9F726 /* LeftViewCell.m in Sources */,
+				D4EFCB1E1CCF44FA00D9F726 /* LeftViewController.m in Sources */,
 				D42BBA261CBA716D008D1F6C /* KJStrudy.xcdatamodeld in Sources */,
 				D42BBA1D1CBA716D008D1F6C /* AppDelegate.m in Sources */,
 				D42BBA1A1CBA716D008D1F6C /* main.m in Sources */,
@@ -413,9 +508,11 @@
 		};
 		D42BBA461CBA716D008D1F6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D50EC74B480A3B5C0FF6F289 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KJStrudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.mx5.canvas.KJStrudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,9 +521,11 @@
 		};
 		D42BBA471CBA716D008D1F6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C9FEA6DE0073ACC05DBD4F6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KJStrudy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.co.mx5.canvas.KJStrudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -500,6 +599,7 @@
 				D42BBA471CBA716D008D1F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D42BBA481CBA716D008D1F6C /* Build configuration list for PBXNativeTarget "KJStrudyTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +608,7 @@
 				D42BBA4A1CBA716D008D1F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D42BBA4B1CBA716D008D1F6C /* Build configuration list for PBXNativeTarget "KJStrudyUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +617,7 @@
 				D42BBA4D1CBA716D008D1F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

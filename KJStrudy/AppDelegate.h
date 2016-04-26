@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "LGSideMenuController.h"
+
+#define kMainViewController                            (LGSideMenuController *)[UIApplication sharedApplication].delegate.window.rootViewController
+#define kNavigationController (UINavigationController *)[(LGSideMenuController *)[UIApplication sharedApplication].delegate.window.rootViewController rootViewController]
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
