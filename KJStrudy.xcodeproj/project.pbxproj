@@ -17,6 +17,15 @@
 		D42BBA2B1CBA716D008D1F6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42BBA291CBA716D008D1F6C /* LaunchScreen.storyboard */; };
 		D42BBA361CBA716D008D1F6C /* KJStrudyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D42BBA351CBA716D008D1F6C /* KJStrudyTests.m */; };
 		D42BBA411CBA716D008D1F6C /* KJStrudyUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D42BBA401CBA716D008D1F6C /* KJStrudyUITests.m */; };
+		D45D8E391CD8BA7A005A29FE /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45D8E381CD8BA7A005A29FE /* Photos.framework */; };
+		D45D8E3C1CD8FAC2005A29FE /* CollectionFullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D45D8E3B1CD8FAC2005A29FE /* CollectionFullViewController.m */; };
+		D469546F1CD5F030002AC428 /* CollectionStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D469546E1CD5F030002AC428 /* CollectionStoryboard.storyboard */; };
+		D46954721CD635AD002AC428 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46954711CD635AD002AC428 /* CollectionViewController.m */; };
+		D46954751CD635C7002AC428 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D46954741CD635C7002AC428 /* MyCollectionViewCell.m */; };
+		D46954781CD6FA09002AC428 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46954771CD6FA09002AC428 /* QuartzCore.framework */; };
+		D4831A3A1CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4831A391CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard */; };
+		D4831A3D1CE0E64B005A5E2E /* ACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4831A3C1CE0E64B005A5E2E /* ACViewController.m */; };
+		D4831A401CE0F5BC005A5E2E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4831A3F1CE0F5BC005A5E2E /* MobileCoreServices.framework */; };
 		D4EFCB1E1CCF44FA00D9F726 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFCB1D1CCF44FA00D9F726 /* LeftViewController.m */; };
 		D4EFCB211CCF499A00D9F726 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D4EFCB201CCF499A00D9F726 /* LeftViewCell.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +67,19 @@
 		D42BBA3C1CBA716D008D1F6C /* KJStrudyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KJStrudyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42BBA401CBA716D008D1F6C /* KJStrudyUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KJStrudyUITests.m; sourceTree = "<group>"; };
 		D42BBA421CBA716D008D1F6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D45D8E381CD8BA7A005A29FE /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		D45D8E3A1CD8FAC2005A29FE /* CollectionFullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionFullViewController.h; sourceTree = "<group>"; };
+		D45D8E3B1CD8FAC2005A29FE /* CollectionFullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionFullViewController.m; sourceTree = "<group>"; };
+		D469546E1CD5F030002AC428 /* CollectionStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionStoryboard.storyboard; sourceTree = "<group>"; };
+		D46954701CD635AD002AC428 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		D46954711CD635AD002AC428 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		D46954731CD635C7002AC428 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		D46954741CD635C7002AC428 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		D46954771CD6FA09002AC428 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D4831A391CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityTestStoryboard.storyboard; sourceTree = "<group>"; };
+		D4831A3B1CE0E64B005A5E2E /* ACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACViewController.h; sourceTree = "<group>"; };
+		D4831A3C1CE0E64B005A5E2E /* ACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACViewController.m; sourceTree = "<group>"; };
+		D4831A3F1CE0F5BC005A5E2E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D4EFCB1C1CCF44FA00D9F726 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		D4EFCB1D1CCF44FA00D9F726 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		D4EFCB1F1CCF499A00D9F726 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
@@ -70,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4831A401CE0F5BC005A5E2E /* MobileCoreServices.framework in Frameworks */,
+				D45D8E391CD8BA7A005A29FE /* Photos.framework in Frameworks */,
+				D46954781CD6FA09002AC428 /* QuartzCore.framework in Frameworks */,
 				439E23F4456A586220A73E35 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +119,9 @@
 		23871AA06330DE0D0C64DD4A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D4831A3F1CE0F5BC005A5E2E /* MobileCoreServices.framework */,
+				D45D8E381CD8BA7A005A29FE /* Photos.framework */,
+				D46954771CD6FA09002AC428 /* QuartzCore.framework */,
 				0767FC863545E0A590FC4075 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -133,10 +161,12 @@
 		D42BBA171CBA716D008D1F6C /* KJStrudy */ = {
 			isa = PBXGroup;
 			children = (
+				D42BBA211CBA716D008D1F6C /* Main.storyboard */,
 				D42BBA1B1CBA716D008D1F6C /* AppDelegate.h */,
 				D42BBA1C1CBA716D008D1F6C /* AppDelegate.m */,
+				D4831A3E1CE0EE0F005A5E2E /* ActiveTest */,
 				D4EFCB1B1CCF155400D9F726 /* LGSideMenu */,
-				D42BBA211CBA716D008D1F6C /* Main.storyboard */,
+				D46954761CD63797002AC428 /* Collection */,
 				D42BBA271CBA716D008D1F6C /* Assets.xcassets */,
 				D42BBA291CBA716D008D1F6C /* LaunchScreen.storyboard */,
 				D42BBA2C1CBA716D008D1F6C /* Info.plist */,
@@ -170,6 +200,30 @@
 				D42BBA421CBA716D008D1F6C /* Info.plist */,
 			);
 			path = KJStrudyUITests;
+			sourceTree = "<group>";
+		};
+		D46954761CD63797002AC428 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				D469546E1CD5F030002AC428 /* CollectionStoryboard.storyboard */,
+				D46954701CD635AD002AC428 /* CollectionViewController.h */,
+				D46954711CD635AD002AC428 /* CollectionViewController.m */,
+				D46954731CD635C7002AC428 /* MyCollectionViewCell.h */,
+				D46954741CD635C7002AC428 /* MyCollectionViewCell.m */,
+				D45D8E3A1CD8FAC2005A29FE /* CollectionFullViewController.h */,
+				D45D8E3B1CD8FAC2005A29FE /* CollectionFullViewController.m */,
+			);
+			name = Collection;
+			sourceTree = "<group>";
+		};
+		D4831A3E1CE0EE0F005A5E2E /* ActiveTest */ = {
+			isa = PBXGroup;
+			children = (
+				D4831A391CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard */,
+				D4831A3B1CE0E64B005A5E2E /* ACViewController.h */,
+				D4831A3C1CE0E64B005A5E2E /* ACViewController.m */,
+			);
+			name = ActiveTest;
 			sourceTree = "<group>";
 		};
 		D4EFCB1B1CCF155400D9F726 /* LGSideMenu */ = {
@@ -255,6 +309,7 @@
 				TargetAttributes = {
 					D42BBA141CBA716D008D1F6C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = R8HUPBK3EX;
 					};
 					D42BBA301CBA716D008D1F6C = {
 						CreatedOnToolsVersion = 7.2;
@@ -292,8 +347,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42BBA2B1CBA716D008D1F6C /* LaunchScreen.storyboard in Resources */,
+				D4831A3A1CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard in Resources */,
 				D42BBA281CBA716D008D1F6C /* Assets.xcassets in Resources */,
 				D42BBA231CBA716D008D1F6C /* Main.storyboard in Resources */,
+				D469546F1CD5F030002AC428 /* CollectionStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,10 +424,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42BBA201CBA716D008D1F6C /* ViewController.m in Sources */,
+				D46954721CD635AD002AC428 /* CollectionViewController.m in Sources */,
 				D4EFCB211CCF499A00D9F726 /* LeftViewCell.m in Sources */,
+				D45D8E3C1CD8FAC2005A29FE /* CollectionFullViewController.m in Sources */,
+				D4831A3D1CE0E64B005A5E2E /* ACViewController.m in Sources */,
 				D4EFCB1E1CCF44FA00D9F726 /* LeftViewController.m in Sources */,
 				D42BBA261CBA716D008D1F6C /* KJStrudy.xcdatamodeld in Sources */,
 				D42BBA1D1CBA716D008D1F6C /* AppDelegate.m in Sources */,
+				D46954751CD635C7002AC428 /* MyCollectionViewCell.m in Sources */,
 				D42BBA1A1CBA716D008D1F6C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -511,6 +572,7 @@
 			baseConfigurationReference = D50EC74B480A3B5C0FF6F289 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KJStrudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -524,6 +586,7 @@
 			baseConfigurationReference = 1C9FEA6DE0073ACC05DBD4F6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = KJStrudy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

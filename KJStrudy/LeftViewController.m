@@ -20,8 +20,8 @@
     if (self) {
         _titlesArray = @[@"Open Right View",
                         @"",
-                        @"Item1",
-                        @"Item2",
+                        @"Collection",
+                        @"Activity",
                         @"Item3"];
         [self.tableView registerClass:[LeftViewCell class] forCellReuseIdentifier:@"cell"];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -73,14 +73,33 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%s ",  __PRETTY_FUNCTION__);
+    NSLog(@"%s %d",  __PRETTY_FUNCTION__, indexPath.row);
 
-    UIViewController *viewController = [[UIViewController alloc] init];
-    viewController.view.backgroundColor = [UIColor whiteColor];
-    viewController.title = _titlesArray[indexPath.row];
+    if (indexPath.row == 2) {
+        UIStoryboard *collectionStoryBoard = [UIStoryboard storyboardWithName:@"CollectionStoryboard" bundle:[NSBundle mainBundle]];
+        UIViewController *viewController = [collectionStoryBoard instantiateInitialViewController];
+        viewController.title = _titlesArray[indexPath.row];
+        
+        //[self presentViewController:viewController animated:YES completion:nil];
+        [kMainViewController setRootViewController:viewController];
+        [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
+    }else if (indexPath.row == 3){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActivityTestStoryboard" bundle:[NSBundle mainBundle]];
+        UIViewController *viewController = [storyboard instantiateInitialViewController];
+        viewController.title = _titlesArray[indexPath.row];
+        
+        [self presentViewController:viewController animated:YES completion:nil];
+        [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
     
-    [kNavigationController pushViewController:viewController animated:YES];
-    [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
+    } else {
+        UIViewController *viewController = [[UIViewController alloc] init];
+        viewController.view.backgroundColor = [UIColor whiteColor];
+        viewController.title = _titlesArray[indexPath.row];
+        
+        [kNavigationController pushViewController:viewController animated:YES];
+        [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
+
+    }
 
 }
 
