@@ -26,6 +26,7 @@
 
 
 - (IBAction)backItemBarButton:(id)sender;
+
 @end
 
 @implementation CollectionViewController
@@ -82,7 +83,11 @@ static NSString * const reuseIdentifier = @"cell1";
 }
 
 - (IBAction)backItemBarButton:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"%s",__PRETTY_FUNCTION__);
+    if (self.delegate){
+        [self.delegate collectionViewControllerViewDidFinish:self];
+    }
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -296,6 +301,8 @@ static NSString * const reuseIdentifier = @"cell1";
 	
 }
 */
+
+
 
 
 @end

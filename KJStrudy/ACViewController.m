@@ -8,11 +8,15 @@
 
 #import "ACViewController.h"
 @import MobileCoreServices;
+@import AVKit;
+@import AVFoundation;
 
 @interface ACViewController ()<UIImagePickerControllerDelegate>
 - (IBAction)selectMedia:(UIBarButtonItem *)sender;
 @property (weak, nonatomic) IBOutlet UILabel *selectTitle;
+@property (strong, nonatomic) NSData *imageData;
 - (IBAction)leftButtonAction:(UIBarButtonItem *)sender;
+- (IBAction)actionSocial:(id)sender;
 
 @end
 
@@ -32,7 +36,15 @@
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     
     NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
+    NSLog(@"%@",url);
+    NSError *error = nil;
+    NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
     //_selectTitle.text = title;
+    [self setImageData:data];
+    
+    AVPlayerViewController *playerViewController = (AVPlayerViewController *)self.childViewControllers[0];
+    playerViewController.player = [AVPlayer playerWithURL:url];
+    [playerViewController.player play];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -64,6 +76,26 @@
     }
 }
 - (IBAction)leftButtonAction:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    if (self.delegate){
+        [self.delegate acViewControllerDidFinish:self];
+    }
+}
+
+- (IBAction)actionSocial:(id)sender {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString* videoPath = [documentsDirectory stringByAppendingPathComponent:@"Test.MOV"];
+
+    NSError *error;
+    [[NSFileManager defaultManager] removeItemAtPath:videoPath error:&error];
+    BOOL success = [_imageData writeToFile:videoPath atomically:YES];
+    if (success) {
+        NSArray *activityItems = [NSArray arrayWithObjects:[NSURL fileURLWithPath:videoPath], nil];
+        
+        UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+        [self presentViewController:activityViewController animated:YES completion:nil];
+    }
+    
 }
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RFg-iw-kOm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RFg-iw-kOm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -26,13 +26,17 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="JYc-F5-9IZ"/>
-                                    <barButtonItem systemItem="action" id="ucW-gH-Gco"/>
+                                    <barButtonItem systemItem="action" id="ucW-gH-Gco">
+                                        <connections>
+                                            <action selector="actionSocial:" destination="RFg-iw-kOm" id="1Jg-49-kO6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADa-Ff-LBG">
                                 <rect key="frame" x="279" y="353" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6X1-GJ-3Km">
@@ -47,16 +51,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WX3-cn-8er">
+                                <rect key="frame" x="0.0" y="64" width="600" height="226"/>
+                                <connections>
+                                    <segue destination="MDX-h5-oee" kind="embed" id="9Sf-3r-m2R"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="leading" secondItem="ulJ-HT-tMp" secondAttribute="leading" id="0yv-fu-QHF"/>
                             <constraint firstAttribute="trailing" secondItem="6X1-GJ-3Km" secondAttribute="trailing" id="6e1-Mw-hLh"/>
                             <constraint firstItem="ADa-Ff-LBG" firstAttribute="centerX" secondItem="ulJ-HT-tMp" secondAttribute="centerX" id="9Wg-8T-B1j"/>
+                            <constraint firstItem="WX3-cn-8er" firstAttribute="top" secondItem="6X1-GJ-3Km" secondAttribute="bottom" id="J5f-dv-J5t"/>
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="leading" secondItem="xED-l4-DXW" secondAttribute="leading" id="NOB-M0-mu5"/>
+                            <constraint firstItem="WX3-cn-8er" firstAttribute="trailing" secondItem="6X1-GJ-3Km" secondAttribute="trailing" id="Nil-YG-caa"/>
                             <constraint firstAttribute="bottom" secondItem="ADa-Ff-LBG" secondAttribute="bottom" constant="226" id="OJ1-6Q-Vv0"/>
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="top" secondItem="Rm5-AC-1M9" secondAttribute="bottom" id="X8v-To-fwm"/>
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="trailing" secondItem="ulJ-HT-tMp" secondAttribute="trailing" id="epN-gb-Nte"/>
+                            <constraint firstItem="WX3-cn-8er" firstAttribute="leading" secondItem="6X1-GJ-3Km" secondAttribute="leading" id="gj7-6H-M1r"/>
+                            <constraint firstItem="ADa-Ff-LBG" firstAttribute="top" secondItem="WX3-cn-8er" secondAttribute="bottom" constant="63" id="h74-gt-kMq"/>
                             <constraint firstItem="ulJ-HT-tMp" firstAttribute="bottom" secondItem="maP-fN-Vdy" secondAttribute="top" id="vYx-Y4-wyQ"/>
                         </constraints>
                     </view>
@@ -66,7 +80,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HZw-av-Ne8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="423"/>
+            <point key="canvasLocation" x="29" y="364"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="W1c-fm-1Cj">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspectFill" id="MDX-h5-oee" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfF-gq-3NT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="714" y="261"/>
         </scene>
     </scenes>
 </document>

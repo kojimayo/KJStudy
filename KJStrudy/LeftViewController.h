@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CollectionViewController.h"
+#import "ACViewController.h"
 
-@interface LeftViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
+@interface LeftViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource, CollectionViewControllerDelegate, ACViewControllerDelegate>
 @property (strong, nonatomic) UIColor *tintColor;
 @end

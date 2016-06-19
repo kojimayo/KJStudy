@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ACViewController : UIViewController
+@class ACViewController;
 
+@protocol ACViewControllerDelegate <NSObject>
+
+- (void)acViewControllerDidFinish:(ACViewController *)controller;
+
+@end
+
+@interface ACViewController : UIViewController
+@property (weak, nonatomic) id <ACViewControllerDelegate> delegate;
 @end

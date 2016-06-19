@@ -77,20 +77,28 @@
 
     if (indexPath.row == 2) {
         UIStoryboard *collectionStoryBoard = [UIStoryboard storyboardWithName:@"CollectionStoryboard" bundle:[NSBundle mainBundle]];
-        UIViewController *viewController = [collectionStoryBoard instantiateInitialViewController];
+        UINavigationController *navigationController = [collectionStoryBoard instantiateInitialViewController];
+        NSArray *viewControllers = [navigationController viewControllers];
+        if (viewControllers.count > 0){
+            CollectionViewController *collectionViewController =  (CollectionViewController *)viewControllers[0];
+            
+            collectionViewController.delegate = self;
+            collectionViewController.title = _titlesArray[indexPath.row];
+        }
+        
+        //[self presentViewController:viewController animated:YES completion:nil];
+        [kMainViewController setRootViewController:navigationController];
+        [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
+    }else if (indexPath.row == 3){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActivityTestStoryboard" bundle:[NSBundle mainBundle]];
+        ACViewController *viewController = (ACViewController *)[storyboard instantiateInitialViewController];
         viewController.title = _titlesArray[indexPath.row];
+        viewController.delegate = self;
         
         //[self presentViewController:viewController animated:YES completion:nil];
         [kMainViewController setRootViewController:viewController];
         [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
-    }else if (indexPath.row == 3){
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActivityTestStoryboard" bundle:[NSBundle mainBundle]];
-        UIViewController *viewController = [storyboard instantiateInitialViewController];
-        viewController.title = _titlesArray[indexPath.row];
         
-        [self presentViewController:viewController animated:YES completion:nil];
-        [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
-    
     } else {
         UIViewController *viewController = [[UIViewController alloc] init];
         viewController.view.backgroundColor = [UIColor whiteColor];
@@ -102,6 +110,17 @@
     }
 
 }
+
+#pragma mark collectionViewControllerDelegate
+-(void)collectionViewControllerViewDidFinish:(CollectionViewController *)controller {
+    [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
+}
+
+#pragma mark acViewControllerDelegate
+-(void)acViewControllerDidFinish:(ACViewController *)controller{
+    [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
+}
+
 
 
 @end

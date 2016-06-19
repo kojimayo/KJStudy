@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+@class CollectionViewController;
+
+@protocol CollectionViewControllerDelegate <NSObject>
+
+- (void)collectionViewControllerViewDidFinish:(CollectionViewController *)controller;
+
+@end
+
 @interface CollectionViewController : UICollectionViewController
 @property (weak, nonatomic) IBOutlet UILabel *cellLabel;
 @property (weak, nonatomic) IBOutlet UIView *cellView;
+@property (weak, nonatomic) id <CollectionViewControllerDelegate> delegate;
 
 @end
+
