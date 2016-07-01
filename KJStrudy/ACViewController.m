@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSData *imageData;
 - (IBAction)leftButtonAction:(UIBarButtonItem *)sender;
 - (IBAction)actionSocial:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *containerview;
 
 @end
 
@@ -27,6 +28,23 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)viewDidLayoutSubviews {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActivityTestStoryboard" bundle:[NSBundle mainBundle]];
+    NSLog(@"sub = %@", self.childViewControllers[0]);
+    
+    UIViewController *beforeview = self.childViewControllers[0];
+    
+    [beforeview willMoveToParentViewController:nil];
+    //[beforeview.view removeFromSuperview];
+    [beforeview removeFromParentViewController];
+    
+    UIViewController *newview = [storyboard instantiateViewControllerWithIdentifier:@"1"];
+    NSLog(@"newview = %@", newview);
+    
+    [self addChildViewController:newview];
+    [self ]
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -35,8 +53,9 @@
 #pragma mark - UIImagePickerControllerDelegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
     
-    NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
-    NSLog(@"%@",url);
+    //NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
+    NSURL *url = [info objectForKey:UIImagePickerControllerReferenceURL];
+    NSLog(@"image pick URL= %@",url);
     NSError *error = nil;
     NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
     //_selectTitle.text = title;
@@ -70,7 +89,7 @@
         picker.delegate = self;
         picker.allowsEditing = NO;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        picker.mediaTypes = @[(NSString*)kUTTypeMovie];
+        picker.mediaTypes = @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeImage];
         
         [self presentViewController:picker animated:YES completion:nil];
     }
