@@ -29,20 +29,27 @@
 }
 
 - (void)viewDidLayoutSubviews {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActivityTestStoryboard" bundle:[NSBundle mainBundle]];
-    NSLog(@"sub = %@", self.childViewControllers[0]);
+}
+
+- (void)changeContainerEmbededViewTo:(UIViewController *)newView animated:(BOOL)animated {
     
+    //NSLog(@"sub = %@", self.childViewControllers[0]);
+    
+
     UIViewController *beforeview = self.childViewControllers[0];
     
     [beforeview willMoveToParentViewController:nil];
-    //[beforeview.view removeFromSuperview];
+    [beforeview.view removeFromSuperview];
     [beforeview removeFromParentViewController];
     
-    UIViewController *newview = [storyboard instantiateViewControllerWithIdentifier:@"1"];
-    NSLog(@"newview = %@", newview);
+    NSLog(@"newview = %@", newView);
     
-    [self addChildViewController:newview];
-    [self ]
+    newView.view.frame = _containerview.frame;
+    
+    [self addChildViewController:newView];
+    [_containerview addSubview:newView.view];
+    [newView didMoveToParentViewController:self];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,20 +59,35 @@
 
 #pragma mark - UIImagePickerControllerDelegate
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ActivityTestStoryboard" bundle:[NSBundle mainBundle]];
     
-    //NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
-    NSURL *url = [info objectForKey:UIImagePickerControllerReferenceURL];
-    NSLog(@"image pick URL= %@",url);
-    NSError *error = nil;
-    NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
-    //_selectTitle.text = title;
-    [self setImageData:data];
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    if([mediaType isEqualToString:(__bridge NSString *)kUTTypeImage]) {
+        UIViewController *imageView = [storyboard instantiateViewControllerWithIdentifier:@"1"];
+        UIImage *view = [imageView.view viewWithTag:1];
+        view.images
+        
+        [self changeContainerEmbededViewTo:imageView animated:NO];
     
-    AVPlayerViewController *playerViewController = (AVPlayerViewController *)self.childViewControllers[0];
-    playerViewController.player = [AVPlayer playerWithURL:url];
-    [playerViewController.player play];
-    
-    [self dismissViewControllerAnimated:YES completion:nil];
+    } else if ([mediaType isEqualToString:(__bridge NSString *)kUTTypeMovie]) {
+        UIViewController *movieView = [storyboard instantiateViewControllerWithIdentifier:@"2"];
+        [self changeContainerEmbededViewTo:movieView animated:NO];
+   
+       //NSURL *url = [info objectForKey:UIImagePickerControllerMediaURL];
+        NSURL *url = [info objectForKey:UIImagePickerControllerReferenceURL];
+        NSLog(@"image pick URL= %@",url);
+        NSError *error = nil;
+        NSData *data = [NSData dataWithContentsOfURL:url options:NSDataReadingUncached error:&error];
+        //_selectTitle.text = title;
+        [self setImageData:data];
+        
+        AVPlayerViewController *playerViewController = (AVPlayerViewController *)self.childViewControllers[0];
+        playerViewController.player = [AVPlayer playerWithURL:url];
+        [playerViewController.player play];
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+
 }
 
 -(void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
