@@ -63,11 +63,12 @@
     
     NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
     if([mediaType isEqualToString:(__bridge NSString *)kUTTypeImage]) {
-        UIViewController *imageView = [storyboard instantiateViewControllerWithIdentifier:@"1"];
-        UIImage *view = [imageView.view viewWithTag:1];
-        view.images
+        UIViewController *imageViewController = [storyboard instantiateViewControllerWithIdentifier:@"1"];
+        UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        [imageViewController.view addSubview:imageView];
         
-        [self changeContainerEmbededViewTo:imageView animated:NO];
+        [self changeContainerEmbededViewTo:imageViewController animated:NO];
     
     } else if ([mediaType isEqualToString:(__bridge NSString *)kUTTypeMovie]) {
         UIViewController *movieView = [storyboard instantiateViewControllerWithIdentifier:@"2"];
@@ -85,8 +86,8 @@
         playerViewController.player = [AVPlayer playerWithURL:url];
         [playerViewController.player play];
         
-        [self dismissViewControllerAnimated:YES completion:nil];
     }
+    [self dismissViewControllerAnimated:YES completion:nil];
 
 }
 
