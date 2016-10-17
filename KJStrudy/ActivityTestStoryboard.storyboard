@@ -63,14 +63,14 @@
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="leading" secondItem="ulJ-HT-tMp" secondAttribute="leading" id="0yv-fu-QHF"/>
                             <constraint firstAttribute="trailing" secondItem="6X1-GJ-3Km" secondAttribute="trailing" id="6e1-Mw-hLh"/>
                             <constraint firstItem="ADa-Ff-LBG" firstAttribute="centerX" secondItem="ulJ-HT-tMp" secondAttribute="centerX" id="9Wg-8T-B1j"/>
-                            <constraint firstItem="WX3-cn-8er" firstAttribute="top" secondItem="6X1-GJ-3Km" secondAttribute="bottom" id="J5f-dv-J5t"/>
+                            <constraint firstItem="WX3-cn-8er" firstAttribute="top" secondItem="6X1-GJ-3Km" secondAttribute="bottom" id="Ez5-qc-PBf"/>
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="leading" secondItem="xED-l4-DXW" secondAttribute="leading" id="NOB-M0-mu5"/>
-                            <constraint firstItem="WX3-cn-8er" firstAttribute="trailing" secondItem="6X1-GJ-3Km" secondAttribute="trailing" id="Nil-YG-caa"/>
                             <constraint firstAttribute="bottom" secondItem="ADa-Ff-LBG" secondAttribute="bottom" constant="226" id="OJ1-6Q-Vv0"/>
+                            <constraint firstItem="WX3-cn-8er" firstAttribute="trailing" secondItem="6X1-GJ-3Km" secondAttribute="trailing" id="R3u-QO-eYD"/>
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="top" secondItem="Rm5-AC-1M9" secondAttribute="bottom" id="X8v-To-fwm"/>
                             <constraint firstItem="6X1-GJ-3Km" firstAttribute="trailing" secondItem="ulJ-HT-tMp" secondAttribute="trailing" id="epN-gb-Nte"/>
-                            <constraint firstItem="WX3-cn-8er" firstAttribute="leading" secondItem="6X1-GJ-3Km" secondAttribute="leading" id="gj7-6H-M1r"/>
-                            <constraint firstItem="ADa-Ff-LBG" firstAttribute="top" secondItem="WX3-cn-8er" secondAttribute="bottom" constant="63" id="h74-gt-kMq"/>
+                            <constraint firstItem="WX3-cn-8er" firstAttribute="leading" secondItem="6X1-GJ-3Km" secondAttribute="leading" id="jWN-RX-yEJ"/>
+                            <constraint firstItem="ADa-Ff-LBG" firstAttribute="top" secondItem="WX3-cn-8er" secondAttribute="bottom" constant="63" id="uXY-P9-czd"/>
                             <constraint firstItem="ulJ-HT-tMp" firstAttribute="bottom" secondItem="maP-fN-Vdy" secondAttribute="top" id="vYx-Y4-wyQ"/>
                         </constraints>
                     </view>

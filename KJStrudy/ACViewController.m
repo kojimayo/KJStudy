@@ -23,9 +23,11 @@
 
 @implementation ACViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)viewDidLayoutSubviews {
@@ -44,7 +46,11 @@
     
     NSLog(@"newview = %@", newView);
     
-    newView.view.frame = _containerview.frame;
+    newView.view.frame = _containerview.bounds;
+    newView.view.bounds = CGRectMake(0, 0, _containerview.bounds.size.width, _containerview.bounds.size.height);
+    newView.view.center = [_containerview convertPoint:_containerview.center fromView:_containerview.superview];
+    
+    NSLog(@"newview = %f %f", newView.view.frame.size.height, newView.view.frame.size.width);
     
     [self addChildViewController:newView];
     [_containerview addSubview:newView.view];
@@ -66,9 +72,12 @@
         UIViewController *imageViewController = [storyboard instantiateViewControllerWithIdentifier:@"1"];
         UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        imageView.contentMode = UIViewContentModeScaleAspectFit;
         [imageViewController.view addSubview:imageView];
         
         [self changeContainerEmbededViewTo:imageViewController animated:NO];
+        
+        imageView.frame = imageViewController.view.bounds;
     
     } else if ([mediaType isEqualToString:(__bridge NSString *)kUTTypeMovie]) {
         UIViewController *movieView = [storyboard instantiateViewControllerWithIdentifier:@"2"];
