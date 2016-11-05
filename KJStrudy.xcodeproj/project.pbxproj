@@ -23,6 +23,8 @@
 		D46954721CD635AD002AC428 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46954711CD635AD002AC428 /* CollectionViewController.m */; };
 		D46954751CD635C7002AC428 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D46954741CD635C7002AC428 /* MyCollectionViewCell.m */; };
 		D46954781CD6FA09002AC428 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46954771CD6FA09002AC428 /* QuartzCore.framework */; };
+		D46B059E1DC2587B00693230 /* SessionTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D46B059D1DC2587B00693230 /* SessionTest.storyboard */; };
+		D46B05A31DC25D3E00693230 /* STViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46B05A21DC25D3E00693230 /* STViewController.m */; };
 		D4831A3A1CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4831A391CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard */; };
 		D4831A3D1CE0E64B005A5E2E /* ACViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4831A3C1CE0E64B005A5E2E /* ACViewController.m */; };
 		D4831A401CE0F5BC005A5E2E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4831A3F1CE0F5BC005A5E2E /* MobileCoreServices.framework */; };
@@ -77,6 +79,9 @@
 		D46954731CD635C7002AC428 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		D46954741CD635C7002AC428 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		D46954771CD6FA09002AC428 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D46B059D1DC2587B00693230 /* SessionTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SessionTest.storyboard; sourceTree = "<group>"; };
+		D46B05A11DC25D3E00693230 /* STViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STViewController.h; sourceTree = "<group>"; };
+		D46B05A21DC25D3E00693230 /* STViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STViewController.m; sourceTree = "<group>"; };
 		D4831A391CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ActivityTestStoryboard.storyboard; sourceTree = "<group>"; };
 		D4831A3B1CE0E64B005A5E2E /* ACViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACViewController.h; sourceTree = "<group>"; };
 		D4831A3C1CE0E64B005A5E2E /* ACViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACViewController.m; sourceTree = "<group>"; };
@@ -168,6 +173,7 @@
 				D42BBA211CBA716D008D1F6C /* Main.storyboard */,
 				D42BBA1B1CBA716D008D1F6C /* AppDelegate.h */,
 				D42BBA1C1CBA716D008D1F6C /* AppDelegate.m */,
+				D46B059C1DC2582700693230 /* SessionTest */,
 				D4831A3E1CE0EE0F005A5E2E /* ActiveTest */,
 				D4EFCB1B1CCF155400D9F726 /* LGSideMenu */,
 				D46954761CD63797002AC428 /* Collection */,
@@ -218,6 +224,16 @@
 				D45D8E3B1CD8FAC2005A29FE /* CollectionFullViewController.m */,
 			);
 			name = Collection;
+			sourceTree = "<group>";
+		};
+		D46B059C1DC2582700693230 /* SessionTest */ = {
+			isa = PBXGroup;
+			children = (
+				D46B059D1DC2587B00693230 /* SessionTest.storyboard */,
+				D46B05A11DC25D3E00693230 /* STViewController.h */,
+				D46B05A21DC25D3E00693230 /* STViewController.m */,
+			);
+			name = SessionTest;
 			sourceTree = "<group>";
 		};
 		D4831A3E1CE0EE0F005A5E2E /* ActiveTest */ = {
@@ -351,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42BBA2B1CBA716D008D1F6C /* LaunchScreen.storyboard in Resources */,
+				D46B059E1DC2587B00693230 /* SessionTest.storyboard in Resources */,
 				D4831A3A1CE0DA77005A5E2E /* ActivityTestStoryboard.storyboard in Resources */,
 				D42BBA281CBA716D008D1F6C /* Assets.xcassets in Resources */,
 				D42BBA231CBA716D008D1F6C /* Main.storyboard in Resources */,
@@ -428,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D42BBA201CBA716D008D1F6C /* ViewController.m in Sources */,
+				D46B05A31DC25D3E00693230 /* STViewController.m in Sources */,
 				D46954721CD635AD002AC428 /* CollectionViewController.m in Sources */,
 				D4EFCB211CCF499A00D9F726 /* LeftViewCell.m in Sources */,
 				D45D8E3C1CD8FAC2005A29FE /* CollectionFullViewController.m in Sources */,

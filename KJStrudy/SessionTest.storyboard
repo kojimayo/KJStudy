@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yNN-TH-lQ6">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Hs0-D3-Ik2">
+            <objects>
+                <viewController id="yNN-TH-lQ6" customClass="STViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rg6-cs-f0N"/>
+                        <viewControllerLayoutGuide type="bottom" id="mRc-1x-9ZO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AnP-6S-8FC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="IY8-3n-jBi">
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6vh-An-nfs">
+                                <items>
+                                    <navigationItem title="今日の運勢" id="V8b-NL-V99">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="w8q-HM-Pxa">
+                                            <connections>
+                                                <action selector="backButtonTap:" destination="yNN-TH-lQ6" id="V54-Hf-0Jk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="tyW-5c-MTo">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="5G4-yJ-ZPl"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="499276027.321693">
+                                    <!--2016-10-27 15:47:07 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="生年月日を選択して下さい" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AYo-Xv-UF9">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="WSP-jp-a1P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="星座" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhO-dy-EzH">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rib-ph-4Hp"/>
+                                    <constraint firstAttribute="width" constant="86" id="h87-WU-jPA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラッキーアイテム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEy-3V-vnW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ラッキーカラー" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xY-Ss-bUl">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zzd-Ia-hVj">
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0mJ-q3-Rqu">
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTt-NQ-hZ0">
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="今日の運勢！"/>
+                                <connections>
+                                    <action selector="sendRequestButton:" destination="yNN-TH-lQ6" eventType="touchUpInside" id="8se-9I-ykn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="AYo-Xv-UF9" firstAttribute="centerX" secondItem="tyW-5c-MTo" secondAttribute="centerX" id="661-yO-N5P"/>
+                            <constraint firstItem="UEy-3V-vnW" firstAttribute="leading" secondItem="AnP-6S-8FC" secondAttribute="leadingMargin" id="9J3-Mt-apq"/>
+                            <constraint firstItem="UEy-3V-vnW" firstAttribute="leading" secondItem="3xY-Ss-bUl" secondAttribute="leading" id="CRl-KY-MoZ"/>
+                            <constraint firstItem="6vh-An-nfs" firstAttribute="leading" secondItem="AYo-Xv-UF9" secondAttribute="leading" id="ESJ-gK-xZ6"/>
+                            <constraint firstItem="6vh-An-nfs" firstAttribute="trailing" secondItem="AYo-Xv-UF9" secondAttribute="trailing" id="HXA-sR-2SE"/>
+                            <constraint firstItem="AYo-Xv-UF9" firstAttribute="leading" secondItem="vTt-NQ-hZ0" secondAttribute="leading" id="IWq-Ba-JSZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6vh-An-nfs" secondAttribute="trailing" id="JKw-Zr-obs"/>
+                            <constraint firstItem="Zzd-Ia-hVj" firstAttribute="trailing" secondItem="AnP-6S-8FC" secondAttribute="trailingMargin" id="KIl-MJ-FXL"/>
+                            <constraint firstItem="AYo-Xv-UF9" firstAttribute="trailing" secondItem="vTt-NQ-hZ0" secondAttribute="trailing" id="OaC-Ib-scT"/>
+                            <constraint firstItem="6vh-An-nfs" firstAttribute="leading" secondItem="AnP-6S-8FC" secondAttribute="leading" id="RJI-U4-CgW"/>
+                            <constraint firstItem="0mJ-q3-Rqu" firstAttribute="trailing" secondItem="Zzd-Ia-hVj" secondAttribute="trailing" id="SP0-lO-o3y"/>
+                            <constraint firstItem="IY8-3n-jBi" firstAttribute="top" secondItem="qhO-dy-EzH" secondAttribute="bottom" constant="11" id="WIe-Lq-W2L"/>
+                            <constraint firstItem="vTt-NQ-hZ0" firstAttribute="trailing" secondItem="IY8-3n-jBi" secondAttribute="trailing" id="XHQ-BQ-0lO"/>
+                            <constraint firstItem="vTt-NQ-hZ0" firstAttribute="centerX" secondItem="qhO-dy-EzH" secondAttribute="centerX" id="XSr-ck-8A0"/>
+                            <constraint firstItem="0mJ-q3-Rqu" firstAttribute="leading" secondItem="Zzd-Ia-hVj" secondAttribute="leading" id="Xzt-n8-5AE"/>
+                            <constraint firstItem="qhO-dy-EzH" firstAttribute="top" secondItem="vTt-NQ-hZ0" secondAttribute="bottom" constant="37" id="eMX-eF-69r"/>
+                            <constraint firstItem="6vh-An-nfs" firstAttribute="top" secondItem="rg6-cs-f0N" secondAttribute="bottom" id="fgN-CZ-B4C"/>
+                            <constraint firstItem="tyW-5c-MTo" firstAttribute="leading" secondItem="AnP-6S-8FC" secondAttribute="leadingMargin" constant="27" id="fn2-x9-UJl"/>
+                            <constraint firstItem="AYo-Xv-UF9" firstAttribute="top" secondItem="6vh-An-nfs" secondAttribute="bottom" id="hiI-5J-ebw"/>
+                            <constraint firstItem="Zzd-Ia-hVj" firstAttribute="centerY" secondItem="UEy-3V-vnW" secondAttribute="centerY" id="jJL-sC-qZq"/>
+                            <constraint firstItem="tyW-5c-MTo" firstAttribute="top" secondItem="AYo-Xv-UF9" secondAttribute="bottom" constant="1" id="nMf-WX-9vR"/>
+                            <constraint firstItem="mRc-1x-9ZO" firstAttribute="top" secondItem="0mJ-q3-Rqu" secondAttribute="bottom" constant="36" id="q26-jA-zPy"/>
+                            <constraint firstItem="3xY-Ss-bUl" firstAttribute="top" secondItem="UEy-3V-vnW" secondAttribute="bottom" constant="8" symbolic="YES" id="rYa-jR-Zsi"/>
+                            <constraint firstItem="Zzd-Ia-hVj" firstAttribute="leading" secondItem="UEy-3V-vnW" secondAttribute="trailing" constant="8" symbolic="YES" id="vS6-df-vat"/>
+                            <constraint firstItem="vTt-NQ-hZ0" firstAttribute="top" secondItem="tyW-5c-MTo" secondAttribute="bottom" constant="18" id="wLu-R1-svw"/>
+                            <constraint firstItem="vTt-NQ-hZ0" firstAttribute="leading" secondItem="IY8-3n-jBi" secondAttribute="leading" id="zSs-Ol-N70"/>
+                            <constraint firstItem="Zzd-Ia-hVj" firstAttribute="top" secondItem="IY8-3n-jBi" secondAttribute="bottom" constant="39" id="zgr-DO-ZQN"/>
+                            <constraint firstItem="0mJ-q3-Rqu" firstAttribute="centerY" secondItem="3xY-Ss-bUl" secondAttribute="centerY" id="znc-al-6vO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birthDay" destination="tyW-5c-MTo" id="G2Z-sE-mrX"/>
+                        <outlet property="consellationLabel" destination="qhO-dy-EzH" id="SPJ-fK-Ueb"/>
+                        <outlet property="fortuneColorText" destination="0mJ-q3-Rqu" id="Hes-ka-Ck5"/>
+                        <outlet property="fortuneItemText" destination="Zzd-Ia-hVj" id="mau-bM-DMu"/>
+                        <outlet property="fortuneText" destination="IY8-3n-jBi" id="z9L-39-Z26"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7pi-s1-A4J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-543.20000000000005" y="-123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>

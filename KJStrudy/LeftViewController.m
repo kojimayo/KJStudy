@@ -19,10 +19,11 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         _titlesArray = @[@"Open Right View",
-                        @"",
-                        @"Collection",
-                        @"Activity",
-                        @"Item3"];
+                         @"",
+                         @"Collection",
+                         @"Activity",
+                         @"Session",
+                         @"Item"];
         [self.tableView registerClass:[LeftViewCell class] forCellReuseIdentifier:@"cell"];
         self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         self.tableView.contentInset = UIEdgeInsetsMake(44.f, 0.f, 44.f, 0.f);
@@ -98,7 +99,17 @@
         //[self presentViewController:viewController animated:YES completion:nil];
         [kMainViewController setRootViewController:viewController];
         [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
+    }else if (indexPath.row == 4){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SessionTest" bundle:[NSBundle mainBundle]];
+        ACViewController *viewController = (ACViewController *)[storyboard instantiateInitialViewController];
+        viewController.title = _titlesArray[indexPath.row];
+        viewController.delegate = self;
         
+        //[self presentViewController:viewController animated:YES completion:nil];
+        [kMainViewController setRootViewController:viewController];
+        [kMainViewController hideLeftViewAnimated:YES completionHandler:nil];
+        
+    
     } else {
         UIViewController *viewController = [[UIViewController alloc] init];
         viewController.view.backgroundColor = [UIColor whiteColor];
@@ -118,6 +129,11 @@
 
 #pragma mark acViewControllerDelegate
 -(void)acViewControllerDidFinish:(ACViewController *)controller{
+    [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
+}
+
+#pragma mask stViewControllerDelegate
+-(void)stViewControllerDidFinish:(STViewController *)controller{
     [kMainViewController showLeftViewAnimated:YES completionHandler:nil];
 }
 
